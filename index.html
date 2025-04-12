@@ -3,168 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Main</title>
+  <title>Cool Animated Website</title>
   <style>
-    :root {
-      --main-color: #ff0000;
-      --accent-color: #f4f4f4;
-      --text-color: #333;
-      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      font-family: var(--font-family);
-      background-color: var(--accent-color);
-      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
     }
 
     header {
-      background-color: var(--main-color);
-      color: rgb(255, 255, 255);
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      background-color: #333;
-    }
-
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #575757;
-    }
-
-    main {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      background-color: var(--main-color);
-      color: rgb(148, 148, 148);
+      align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 2rem;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
     }
 
     .btn {
-      background-color: var(--main-color);
-      color: white;
-      padding: 10px 20px;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background: white;
+      color: #4f46e5;
       border: none;
-      text-decoration: none;
-      font-size: 16px;
+      border-radius: 50px;
       cursor: pointer;
-      border-radius: 4px;
+      font-size: 1rem;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #357ABD;
+      background: #e0e7ff;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
+    section {
+      padding: 100px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Darlinger Bullanday</h1>
-    <p>My simple website created using html.</p>
+    <h1>Welcome to My World</h1>
+    <p>A place of smooth transitions and clean vibes.</p>
+    <a href="#about"><button class="btn">Scroll Down</button></a>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section id="about">
+    <h2>About This Site</h2>
+    <p>This is a smooth animated website made with love and clean code. Perfect for a portfolio, product launch, or personal space on the web.</p>
+  </section>
 
-  <main>
-    <section id="home">
-      <h2>Welcome</h2>
-      <p>This is my custom website.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </section>
+  <section id="features">
+    <h2>Features</h2>
+    <p>🌟 Smooth animations<br>⚡ Fast loading<br>📱 Fully responsive<br>💻 100% vanilla HTML/CSS/JS</p>
+  </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi i’m Darlinger E. Bullanday 17yrs old and this is all about my life, starting from my childhood memory up to where i am now. Growing up in the place which called Caloocan. As I reflect on the past, I realize just how much has changed in these 16 years, i’ve seen so many people have a lot of dream for their self and that’s motivate me to chase my dream. In writing this autobiography i want to share not just what i experience on my 16 yrs of living but also the lesson i learned along the way.
-
-
-
-        I was born on April 3 2008 in 6704 myrna sub llano cal city. Growing up, my Home is always full of laughter, love, and chaos. My first memories is playing with my toys, the scent of my parents and the lullaby that my mom used to sing to me when it’s time to sleep.
-        
-        
-        As a child i’m very a good kid who listen to their parents and have a lot of friends, and i also enjoy playing outside and play my favorite game which is the beyblade and one more thing i enjoy having a quality time with my parents go to somewhere place which is i never seen before and eat a delicious food with them.
-        I was always a curious person to ask a multiple question to my parents and sometimes lost in my imagination.
-        
-        My first day on school was an terrified experience, a lot of a new faces, i remember feeling nervous on this day because my parents are not here but i’m also greatful that my teachers were kind and made me feel welcome in school. The school became the place where i could find joy, friends and also a lot of favorite lesson. 
-        
-        
-        When i turn into 10 yrs old  My relationship with my family has never been very strong because, since I was a kid, they’ve always been arguing about things I didn’t fully understand. My sister would often make sure I was somewhere I couldn’t hear the arguments, and I’m really grateful to her for that. She’s always been there to help and protect me from their conflicts. Because of her, I became a more independent person, determined not to follow in their footsteps.
-        
-        MY memorable family  experience was when my family and I go on vacation to our province, where we stay until the holidays are over. The weather is perfect for swimming and building sandcastles on the beach, making it an exciting experience! We had an amazing time and even made new friends.
-        
-        As i grew older friendships became an essential part of my life. I met some new people in elementary school and not also them but my closest friend and we’ve continued to share our countless memories together. My friend named nicole become one of my favorite friends because she’s a kind person and not also that she’s prettier and very supported to me she’s smart, My favorite memories with her was going to the primark after school we enjoy many things together with my other friends we play on clown machine and after that we play tag. 
-        
-        As i transitioned into my teenage years. i began to notice some changes in my body not also that i become a different person than before, i became more aware of my surroundings and changes my personal behavior  i struggled to my academics and begin to having a pressure on my self but i know that many people are having experience of that.It became a lesson to me that u don’t have to pressure yourself just have fun and enjoy your life before you become an adult. these experience makes me realize that you dont have to pressure yourself you have your friends, family and god these challenges makes me a different person
-        
-        School still continued as the school year changes the harder the subject i found my interest on the subject called EPP i began to focus more on excelling academically, some of my achievements include an award called honors and stepping on the stage of having that award with my parents ,and after that we eat on jollibee to celebrate my award that makes a memorable moments to me.
-        
-        For a while i was really into playing some chinese garter, singing, listening to music. and this taught me that some lyrics on the music makes you very relatable and then it feels very relaxing. Over the years i discovered a deep love for listening to music which has continued to inspire me.
-        
-        I’ve faced many challenges on my life such as losing some closest friends and people, but with my help of my family and friends but also god i overcame them i learned that people are not always here to stay with you.
-        
-        Highschool has been a time of growth, some changes and  it’s been 2 yrs since the covid 19 started and people are quarantine having an online class are the worst because i became lazy and lazy and until it’s over i remember walking into my first day of walking into school and feeling overwhelmed by the new atmosphere. i met new people, new faces, and new academic pressure and i realize that i had to make sure that i need to focus on my study to succeed 
-        
-        During highschool i joined the English club and involved some sports. these activities helped me grew in a new way teach me an important lesson such as leadership and teamwork. During the teachers days i participated to become an a student teacher these experiences are the most memorable moments in my high school i teach some gr7 that younger than me and they listened to me they called me ma’am or sir since im gay i’m preferred to call me ate ganda kinda embarrassing but that’s what i want.
-        
-        Over the past few years. I’ve learned many things a lot of myself i realize that i really hate myself for being too nice to other people, being softhearted, considerate, and understanding to the point that i even forget to consider my own feelings, but thanks to the friendship i’ve formed the mistake i made and the experience i’ve gone through helped me build more confident and self aware version of myself.
-        
-        My journey through school has been an incredible ride filled with challenges, growth, and unforgettable memories. The day I graduated from high school was a moment I will always treasure. It marked the end of one chapter and the beginning of another. I felt both excitement and nervousness as I walked across the stage, accepting my diploma. It was a symbol of all the hard work I had put in, the late-night study sessions, the friendships I had made, and the lessons I had learned along the way.
-        Graduating from high school was a milestone that filled me with pride, but it also came with a sense of uncertainty about what the future held. I was leaving behind a familiar environment, teachers I had grown close to, and friends I had shared so many experiences with. However, despite the sadness of parting ways with high school, I was also looking forward to the new experiences that awaited me in senior high.
-        As I prepare to enter senior high school, I feel a mix of excitement and nervousness. Senior high school will bring new challenges and greater academic expectations, and I am ready to rise to the occasion. I know that the subjects will become more specialized, and I will need to make important decisions about which track to pursue. Whether I choose a path in science, business, humanities, or arts, I am eager to dive deeper into the subjects that interest me most and help me prepare for my future career.
-        In conclusion, while high school has been an incredible experience, I know that senior high school is where I will truly begin to shape my future. I am eager to embrace this new chapter with determination and an open mind, knowing that it will be a stepping stone toward the person I want to become. I am excited for the challenges, the lessons, and the opportunities that await me, and I look forward to making the most of my time in senior high school.
-        The morning of my first day of senior high school was filled with a mix of excitement and nervousness. I woke up earlier than usual, my heart racing with anticipation for what lay ahead. The day felt significant, not just because it marked the beginning of a new school year, but because it symbolized a major transition in my academic life. I had been looking forward to this day for months, imagining what my senior high school experience would be like. Now, it was finally here, and I was ready to dive into it.
-        By the time school ended, I had made a few friends, and I felt a sense of relief and excitement. I was no longer just the nervous student trying to figure out where I fit in; I was part of a new group of friends who were going to experience this journey with me. We exchanged names and meet up again the next day to walk to class together.</p>
-      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fshocked-meme-gifs&psig=AOvVaw3t78drCTrkgE_4MJvqkg18&ust=1744524842299000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiV0M3r0YwDFQAAAAAdAAAAABAE" alt="About image">
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Highlight your work, hobbies, or achievements. You can include images or links to your GitHub, blog, or videos.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>My Contacts.</p>
-      <ul>
-        <li>Email: bullandaydarlinger9@gmail.com</li>
-        <li>Twitter: @yourhandle</li>
-        <li>GitHub: github.com/yourprofile</li>
-      </ul>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>Want something custom? Reach out and let's create something awesome.</p>
+    <a href="mailto:you@example.com"><button class="btn">Contact Me</button></a>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    &copy; 2025 Cool Animated Site. Built with smoothness 💫
   </footer>
 
+  <script>
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll("section");
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
