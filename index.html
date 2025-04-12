@@ -1,23 +1,132 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customizable Website</title>
+  <style>
+    :root {
+      --main-color: #4A90E2;
+      --accent-color: #f4f4f4;
+      --text-color: #333;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--accent-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn {
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .btn:hover {
+      background-color: #357ABD;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <h1>My Custom Website</h1>
+    <p>Your tagline or motto goes here</p>
   </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <h2>Home Page</h2>
-    <p>This is the main content of the homepage.</p>
-    <button id="greetBtn">Click Me</button>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>This is a customizable website template. Use it for your portfolio, resume, or landing page.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Tell the world who you are. This section is perfect for a bio, mission statement, or background story.</p>
+      <img src="https://via.placeholder.com/800x400" alt="About image">
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Highlight your work, hobbies, or achievements. You can include images or links to your GitHub, blog, or videos.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>My Contacts.</p>
+      <ul>
+        <li>Email: bullandaydarlinger9@gmail.com</li>
+        <li>Twitter: @yourhandle</li>
+        <li>GitHub: github.com/yourprofile</li>
+      </ul>
+    </section>
   </main>
-  <script src="main.js"></script>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
